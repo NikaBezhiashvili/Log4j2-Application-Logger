@@ -1,0 +1,39 @@
+23/05/10 19:50:29 WARN Utils: Your hostname, DESKTOP-16J7RLR resolves to a loopback address: 127.0.0.1, but we couldn't find any external IP address!
+23/05/10 19:50:29 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/05/10 19:50:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/05/10 19:50:33 WARN Hello Spark: Starting HelloSpark
+23/05/10 19:50:42 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+23/05/10 19:50:42 WARN Hello Spark: Finished HelloSpark
+23/05/10 19:50:43 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\Administrator\AppData\Local\Temp\spark-458505e6-f8b1-4439-af29-0074fcb14e4c\pyspark-10e224d5-83f8-42c4-b0d7-0cac94c3de18
+java.nio.file.NoSuchFileException: C:\Users\Administrator\AppData\Local\Temp\spark-458505e6-f8b1-4439-af29-0074fcb14e4c\pyspark-10e224d5-83f8-42c4-b0d7-0cac94c3de18
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53) ~[?:?]
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38) ~[?:?]
+	at sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:194) ~[?:?]
+	at java.nio.file.Files.readAttributes(Files.java:1763) ~[?:?]
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128) ~[spark-network-common_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:121) ~[spark-network-common_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94) ~[spark-network-common_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1231) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36) ~[scala-library-2.12.17.jar:?]
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33) ~[scala-library-2.12.17.jar:?]
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198) ~[scala-library-2.12.17.jar:?]
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23) ~[scala-library-2.12.17.jar:?]
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23) ~[scala-library-2.12.17.jar:?]
+	at scala.util.Try$.apply(Try.scala:213) ~[scala-library-2.12.17.jar:?]
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178) ~[spark-core_2.12-3.4.0.jar:3.4.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
